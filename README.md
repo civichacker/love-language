@@ -1,4 +1,4 @@
-# love-language
+# Love Language Schemas
 
 A collection of STIX 2.1 language extensions for multiple domains of study.
 
