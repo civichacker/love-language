@@ -8,3 +8,4 @@ A collection of STIX 2.1 language extensions for multiple domains of study.
 Use of Force | - | :heavy_check_mark: | - | :heavy_check_mark: | :heavy_check_mark: |
 Environmental Sensors | - | - | :heavy_check_mark: | - | - |
 Legislation | :heavy_check_mark: | - | - | - | - |
+Open Data | :heavy_check_mark: | - | - | :heavy_check_mark: | :heavy_check_mark: |
