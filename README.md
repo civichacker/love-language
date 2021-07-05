@@ -1,6 +1,6 @@
 # love-language
 
-A collection of STIX language extensions for multiple domains of study.
+A collection of STIX 2.1 language extensions for multiple domains of study.
 
 
 | Schema | Domain Object | Relationship Object | Common Object | Property Extension | Toplevel Property Extension |
