@@ -1,0 +1,21 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--33fe3b22-0201-47cf-85d0-97c02164528d",
+    "relationship_type": "attributed-to",
+    "source_ref": "incident--d81f86b9-975b-4c0b-875e-810c5ad45a4f",
+    "target_ref": "identity--d81f86b9-975b-4c0b-875e-810c5ad45a4f",
+    "created": "2014-05-08T09:00:00.000Z",
+    "modified": "2014-05-08T09:00:00.000Z",
+    "use-of-force": "lethal-force",
+    "x_deadly_force": "premptive",
+    "luv_version": "1.0",
+    "extensions": {
+        "extension-definition--9c59fd79-4215-4ba2-920d-3e4f320e1e62": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "object_marking_refs": [
+        "marking-definition--d81f86b9-975b-4c0b-875e-810c5ad45a4f"
+    ]
+}
