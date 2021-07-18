@@ -16,10 +16,13 @@ Included in this work are schemas for the following concepts:
 
 A collection of STIX 2.1 language extensions for multiple domains of study.
 
+:heavy_plus_sign: - planned
+:heavy_check_mark: - completed
+:heavy_multiplication_sign: - deprecated
 
 | Name | Domain | Relationship | Cyber-observable | Property | Toplevel Property |
 | --- | --- | --- | --- | --- | --- |
 Use of Force | - | :heavy_check_mark: | - | :heavy_check_mark: | :heavy_check_mark: |
-Environmental Sensors | - | - | :heavy_check_mark: | - | - |
-Legislation | :heavy_check_mark: | - | - | - | - |
-Open Data | :heavy_check_mark: | - | - | :heavy_check_mark: | :heavy_check_mark: |
+Environmental Sensors | - | - | :heavy_plus_sign: | - | - |
+Legislation | :heavy_plus_sign: | - | - | - | - |
+Open Data | :heavy_plus_sign: | - | - | :heavy_plus_sign: | :heavy_plus_sign: |
