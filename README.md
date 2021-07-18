@@ -23,8 +23,10 @@ Environmental Sensors | - | - | :heavy_plus_sign: | - | - |
 Legislation | :heavy_plus_sign: | - | - | - | - |
 Open Data | :heavy_plus_sign: | - | - | :heavy_plus_sign: | :heavy_plus_sign: |
 
-> :heavy_plus_sign: - planned
+**Legend**
 
-> :heavy_check_mark: - completed
+:heavy_plus_sign: - planned
 
-> :heavy_multiplication_x: - deprecated
+:heavy_check_mark: - completed
+
+:heavy_multiplication_x: - deprecated
