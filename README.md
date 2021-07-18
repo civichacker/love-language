@@ -18,7 +18,7 @@ A collection of STIX 2.1 language extensions for multiple domains of study.
 
 :heavy_plus_sign: - planned
 :heavy_check_mark: - completed
-:heavy_multiplication_sign: - deprecated
+:heavy_multiplication_x: - deprecated
 
 | Name | Domain | Relationship | Cyber-observable | Property | Toplevel Property |
 | --- | --- | --- | --- | --- | --- |
