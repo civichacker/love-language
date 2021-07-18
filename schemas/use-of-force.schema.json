@@ -6,7 +6,7 @@
     "type": "object",
     "allOf": [
         {
-            "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sros/relationship.json"
+            "$ref": "https://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sros/relationship.json"
         },
         {
             "properties": {
