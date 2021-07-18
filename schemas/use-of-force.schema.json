@@ -26,7 +26,7 @@
                   "type": "string",
                   "pattern": "^identity--"
                 },
-                "x_civichacker_use_of_force": {
+                "x_civichacker_force_applied": {
                     "type": "string",
                     "description": "Indicates where on the Use of Force continuum force was used.",
                     "enum": [
