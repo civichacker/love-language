@@ -7,7 +7,7 @@ In our pursuit to use technology to benefit all Humans, we want to encode human 
 
 Included in this work are schemas for the following concepts:
 
-- Use of Force (applied by law enforcement)
+- [Use of Force](./examples/use-of-force/README.md) (applied by law enforcement)
 - Environmental Sensors
 - Legislation
 - Open Data
