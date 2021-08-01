@@ -18,7 +18,7 @@ A collection of STIX 2.1 language extensions for multiple domains of study.
 
 | Name | Domain | Relationship | Cyber-observable | Property | Toplevel Property |
 | --- | --- | --- | --- | --- | --- |
-[Use of Force](./examples/use-of-force/README.md) | - | :heavy_check_mark: | - | :heavy_check_mark: | :heavy_check_mark: |
+[Use of Force](./examples/use-of-force/README.md) | - | :heavy_plus_sign: | - | :heavy_plus_sign: | :heavy_check_mark: |
 Environmental Sensors | - | - | :heavy_plus_sign: | - | - |
 Legislation | :heavy_plus_sign: | - | - | - | - |
 Open Data | :heavy_plus_sign: | - | - | :heavy_plus_sign: | :heavy_plus_sign: |
