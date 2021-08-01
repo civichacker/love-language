@@ -30,3 +30,8 @@ Open Data | :heavy_plus_sign: | - | - | :heavy_plus_sign: | :heavy_plus_sign: |
 :heavy_check_mark: - completed
 
 :heavy_multiplication_x: - deprecated
+
+
+## Contributing
+
+Contributions are not being accepted at this time.
