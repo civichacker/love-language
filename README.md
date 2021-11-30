@@ -1,13 +1,13 @@
 # Love Language Schemas
 
-In our pursuit to use technology to benefit all Humans, we want to encode human concepts that will help us build the tools for Liberty and Justice for all. The schemas and examples in this repository hopes to help those who seek to build information systems and make the concepts to help us fight oppression machine-readable.
+Love Language schemas attempt to encode concepts useful in building information systems for Human betterment. Each concept comes with a description describing the fields and possible values. System designers may find it useful that these schemas are defined using JSON Schema (Draft 7). 
 
 
 ## Schemas
 
 Included in this work are schemas for the following concepts:
 
-- [Use of Force](./examples/use-of-force/README.md) (applied by law enforcement)
+- [Use of Force](./examples/use-of-force/README.md)
 - Environmental Sensors
 - Legislation
 - Open Data
