@@ -9,7 +9,7 @@
 
 ### Force Applied
 
-The `force_applied` property refers to actions taken by law enforcement as described by the [Use of Force Continuum](https://nij.ojp.gov/topics/articles/use-force-continuum) from the U.S. Department of Justice. Information systems creators may wish to store the human-readable descriptions of uses of force in their systems as metadata. For convience, I've provided the human-readable names and descriptions along side of the slugs used in the schema. You can find examples of each levle of force on the [U.S. National Institute of Justice's website](https://nij.ojp.gov/topics/articles/use-force-continuum).
+The `force_applied` property refers to actions taken by law enforcement as described by the [Use of Force Continuum](https://nij.ojp.gov/topics/articles/use-force-continuum) from the U.S. Department of Justice. Information systems creators may wish to store the human-readable descriptions of uses of force in their systems as metadata. For convience, I've provided the human-readable names and descriptions along side of the slugs used in the schema. You can find examples of each level of force on the [U.S. National Institute of Justice's website](https://nij.ojp.gov/topics/articles/use-force-continuum).
 
 | Level of Force | slug | description |
 | --- | --- | --- |
