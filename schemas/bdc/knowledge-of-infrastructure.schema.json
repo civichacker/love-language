@@ -1,0 +1,118 @@
+{
+    "$id": "https://raw.githubusercontent.com/civichacker/love-language/master/schemas/bdc/knowledge-of-infrastructure.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "knowledge-of-infrastructure",
+    "description": "Knowledge of Infrastructure is one of three methodologies accepted by the BDC system when making bulk challenges.",
+    "type": "object",
+    "required": ["provider_id", "brand_name", "technology", "category_code", "evidence_description"],
+    "properties": {
+        "provider_id": {
+          "type": "integer",
+          "description": "Unique identifier for the fixed service provider subject to the crowdsourcesubmission."
+        },
+        "brand_name": {
+          "type": "string",
+          "description": "Brand name of the service subject to the crowdsourcesubmission, as shown on the Broadband Map."
+        },
+        "technology": {
+          "type": "integer",
+          "description": "Code for the technology of the service subject to the crowdsourcesubmission, as shown on the Broadband Map."
+        },
+        "location_id": {
+          "type": "string",
+          "description": "Unique identifier for the location, from the Broadband Serviceable Location Fabric, about which crowdsourceinformation on fixed broadband availability is being submitted."
+        },
+        "data_vintage": {
+          "type": "date",
+          "description": "Vintage date of fixed broadband availability data about which crowdsourceinformation is being submitted."
+        },
+        "category_code": {
+          "type": "integer",
+          "description": "Code identifying the category of fixed service provider crowdsourcesubmission.",
+          "minimum": 1,
+          "maximum": 7
+        },
+        "request_date": {
+          "type": "date",
+          "description": "As relevant, enter the most recent date associated with the category_codeabove, such as the date a service request was denied or the date the filerbecame aware of the circumstances."
+        },
+        "request_method_code": {
+          "type": "integer",
+          "description": "As relevant, enter the communication method associated with the category_code and request_date above, such as how a service request was denied or how the filer became aware of the circumstances.",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "evidence_description": {
+            "anyOf": [
+              {"type": "string"},
+              {"type": "null"}
+            ],
+            "description": "Narrative description of the evidence in support of the crowdsourced submission."
+        }
+    },
+    "allOf": [
+      {
+        "if": {
+            "properties": {
+                "technology": {
+                    "type": "integer",
+                    "minimum": 60,
+                    "maximum": 71
+                }
+            }
+        },
+        "then": {
+            "properties": {
+                "category_code": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 9
+                }
+            }
+        },
+        "else": {
+            "properties": {
+                "category_code": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 7
+                }
+            }
+        }
+      },
+      {
+        "if": {
+            "properties": {
+                "category_code": {
+                    "type": "integer",
+                    "minimum": 5,
+                    "maximum": 7
+                }
+            }
+        },
+        "then": {
+            "properties": {
+                "request_method_code": {
+                    "const": null
+                },
+                "request_date": {
+                    "const": null
+                }
+            }
+        },
+        "else": {
+            "required": ["request_method_code", "request_date"],
+            "properties": {
+                "request_method_code": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 3
+                },
+                "request_date": {
+                  "type": "date"
+                }
+            }
+          }
+      }
+    ]
+}
