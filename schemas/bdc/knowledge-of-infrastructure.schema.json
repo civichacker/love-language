@@ -5,6 +5,7 @@
     "description": "Knowledge of Infrastructure is one of three methodologies accepted by the BDC system when making bulk challenges.",
     "type": "object",
     "required": ["provider_id", "brand_name", "technology", "category_code", "evidence_description"],
+    "additionalProperties": false,
     "properties": {
         "provider_id": {
           "type": "integer",
