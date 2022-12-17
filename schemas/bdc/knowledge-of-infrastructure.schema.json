@@ -9,27 +9,27 @@
     "properties": {
         "provider_id": {
           "type": "integer",
-          "description": "Unique identifier for the fixed service provider subject to the crowdsourcesubmission."
+          "description": "Unique identifier for the fixed service provider subject to the crowdsource submission."
         },
         "brand_name": {
           "type": "string",
-          "description": "Brand name of the service subject to the crowdsourcesubmission, as shown on the Broadband Map."
+          "description": "Brand name of the service subject to the crowdsource submission, as shown on the Broadband Map."
         },
         "technology": {
           "type": "integer",
-          "description": "Code for the technology of the service subject to the crowdsourcesubmission, as shown on the Broadband Map."
+          "description": "Code for the technology of the service subject to the crowdsource submission, as shown on the Broadband Map."
         },
         "location_id": {
           "type": "string",
-          "description": "Unique identifier for the location, from the Broadband Serviceable Location Fabric, about which crowdsourceinformation on fixed broadband availability is being submitted."
+          "description": "Unique identifier for the location, from the Broadband Serviceable Location Fabric, about which crowdsource information on fixed broadband availability is being submitted."
         },
         "data_vintage": {
           "type": "date",
-          "description": "Vintage date of fixed broadband availability data about which crowdsourceinformation is being submitted."
+          "description": "Vintage date of fixed broadband availability data about which crowdsource information is being submitted."
         },
         "category_code": {
           "type": "integer",
-          "description": "Code identifying the category of fixed service provider crowdsourcesubmission.",
+          "description": "Code identifying the category of fixed service provider crowdsource submission.",
           "minimum": 1,
           "maximum": 7
         },
