@@ -6,12 +6,12 @@ verify_ssl = true
 [dev-packages]
 ipython = ">=7.31.1"
 black = "==21.12b0"
-
-[packages]
-stix2-validator = "*"
 jsonschema = "*"
 pytest = "*"
 stix2 = "*"
+stix2-validator = "*"
+
+[packages]
 
 [requires]
 python_version = "3.8"

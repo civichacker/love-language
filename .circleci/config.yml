@@ -1,0 +1,20 @@
+version: 2.1
+orbs:
+  python: circleci/python@2.0.3
+jobs:
+  check schemas:
+    docker:
+      - image: cimg/python:3.8
+    steps:
+      - checkout
+      - python/install-packages:
+          args: '--dev'
+          venv-cache: true
+          pkg-manager: pipenv
+      - run:
+          command: pipenv run pytest
+
+workflows:
+  check schemas:
+    jobs:
+      - check schemas
