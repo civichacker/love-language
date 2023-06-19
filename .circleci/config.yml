@@ -1,20 +1,22 @@
 version: 2.1
+setup: true
+
 orbs:
   python: circleci/python@2.0.3
-jobs:
-  check schemas:
-    docker:
-      - image: cimg/python:3.8
-    steps:
-      - checkout
-      - python/install-packages:
-          args: '--dev'
-          venv-cache: true
-          pkg-manager: pipenv
-      - run:
-          command: pipenv run pytest
+  continuation: circleci/continuation@0.1.2
+  path-filtering: circleci/path-filtering@0.0.2
 
 workflows:
-  check schemas:
+  always-run:
     jobs:
-      - check schemas
+      - path-filtering/filter:
+          name: check-updated-files
+          mapping: |
+            projects/python/.* python true
+            projects/golang/.* golang true
+            projects/csharp/.* csharp true
+            projects/rust/.* rust true
+            projects/nim/.* nimlang true
+            .circleci/.* build-all true
+          base-revision: master
+          config-path: .circleci/test_langs.yml

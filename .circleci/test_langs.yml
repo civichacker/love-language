@@ -1,0 +1,78 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@2.0.3
+  go: circleci/go@1.20.5
+
+parameters:
+  python:
+    type: boolean
+    default: false
+  golang:
+    type: boolean
+    default: false
+  csharp:
+    type: boolean
+    default: false
+  rust:
+    type: boolean
+    default: false
+  nimlang:
+    type: boolean
+    default: false
+  build-all:
+    type: boolean
+    default: false
+
+jobs:
+  python:
+    parameters:
+      appname:
+        type: string
+        default: ""
+    docker:
+        - image: cimg/python:3.10.1
+    working_directory: /tmp/<< parameters.appname >>
+    steps:
+      - checkout
+      - python/install-packages:
+          args: '--dev'
+          venv-cache: true
+          pkg-manager: pipenv
+      - run:
+          command: pipenv run pytest
+
+  golang:
+    parameters:
+      appname:
+        type: string
+        default: ""
+    docker:
+        - image: cimg/go:1.20.5
+    working_directory: /tmp/<< parameters.appname >>
+    steps:
+      - checkout
+      - go/load-cache
+      - go/mod-download
+      - go/save-cache
+      - go/test:
+          failfast: true
+
+
+
+workflows:
+  version: 2
+  python:
+    when: << pipeline.parameters.python >>
+    jobs:
+      - python:
+          filters:
+            branches:
+              ignore: master
+  golang:
+    when: << pipeline.parameters.golang >>
+    jobs:
+      - golang:
+          filters:
+            branches:
+              ignore: master
