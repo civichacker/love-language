@@ -32,9 +32,9 @@ jobs:
         default: ""
     docker:
         - image: cimg/python:3.10.1
-    working_directory: /tmp/<< parameters.appname >>
     steps:
       - checkout
+      - cd projects/python
       - python/install-packages:
           args: '--dev'
           venv-cache: true
@@ -49,9 +49,9 @@ jobs:
         default: ""
     docker:
         - image: cimg/go:1.20.5
-    working_directory: /tmp/<< parameters.appname >>
     steps:
       - checkout
+      - cd projects/golang
       - go/load-cache
       - go/mod-download
       - go/save-cache
