@@ -36,11 +36,10 @@ jobs:
       - checkout
       - run: cd projects/python
       - python/install-packages:
-          args: '--dev'
           venv-cache: true
-          pkg-manager: pipenv
+          pkg-manager: poetry
       - run:
-          command: pipenv run pytest
+          command: poetry run pytest
 
   golang:
     parameters:
