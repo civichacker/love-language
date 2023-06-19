@@ -34,12 +34,12 @@ jobs:
         - image: cimg/python:3.10.1
     steps:
       - checkout
+      - run:
+          command: poetry --version
       - python/install-packages:
           venv-cache: true
           app-dir: projects/python
           pkg-manager: poetry
-      - run:
-          command: poetry --version
       - run:
           command: poetry run pytest
 
