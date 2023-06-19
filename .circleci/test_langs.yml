@@ -39,6 +39,8 @@ jobs:
           app-dir: projects/python
           pkg-manager: poetry
       - run:
+          command: poetry --version
+      - run:
           command: poetry run pytest
 
   golang:
