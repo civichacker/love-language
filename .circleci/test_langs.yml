@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   python: circleci/python@2.0.3
-  go: circleci/go@1.20.5
+  go: circleci/go@1.7.3
 
 parameters:
   python:
