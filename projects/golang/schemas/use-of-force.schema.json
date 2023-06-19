@@ -1,0 +1,69 @@
+{
+    "$id": "https://raw.githubusercontent.com/civichacker/love-language/master/schemas/use-of-force.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "x-use-of-force",
+    "description": "Most law enforcement agencies have policies that guide their use of force. These policies describe a escalating series of actions an officer may take to resolve a situation. This continuum generally has many levels, and officers are instructed to respond with a level of force appropriate to the situation at hand, acknowledging that the officer may move from one part of the continuum to another in a matter of seconds. https://nij.ojp.gov/topics/articles/use-force-continuum",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sros/relationship.json"
+        },
+        {
+            "properties": {
+                "x_civichacker_deadly_force": {
+                  "type": "string",
+                  "enum": [
+                    "anticipatory",
+                    "premptive",
+                    "reactive"
+                  ]
+                },
+                "source_ref": {
+                  "type": "string",
+                  "pattern": "^(incident|identity)--"
+                },
+                "target_ref": {
+                  "type": "string",
+                  "pattern": "^identity--"
+                },
+                "x_civichacker_force_applied": {
+                    "type": "string",
+                    "description": "Indicates where on the Use of Force continuum force was used.",
+                    "enum": [
+                        "presence",
+                        "verbalization",
+                        "empty-hand-control",
+                        "less-lethal-methods",
+                        "lethal-force"
+                    ]
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "extensions": {
+                        "type": "object",
+                        "required": ["extension-definition--9c59fd79-4215-4ba2-920d-3e4f320e1e62"]
+                    }
+                }
+            },
+            "then": {
+                "required": ["x_civichacker_use_of_force"]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "x_civichacker_use_of_force": {
+                        "type": "string",
+                        "pattern": "^lethal-force$"
+                    }
+                }
+            },
+            "then": {
+                "required": ["x_civichacker_deadly_force"]
+            }
+        }
+    ]
+}

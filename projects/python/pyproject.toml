@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "lovelanguage"
+version = "0.1.0"
+description = "An importable collection of JSON schemas for Human betterment."
+authors = ["'Jurnell Cockhren' <jurnell@civichacker.com>"]
+license = "LGPL-3.0-or-later"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = { version = "^6.0.0", python = ">=3.8.1" }
+reuse = "^1.1.2"
+pytest = "^7.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
