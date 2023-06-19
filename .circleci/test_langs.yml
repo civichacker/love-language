@@ -34,9 +34,9 @@ jobs:
         - image: cimg/python:3.10.1
     steps:
       - checkout
-      - run: cd projects/python
       - python/install-packages:
           venv-cache: true
+          app-dir: projects/python
           pkg-manager: poetry
       - run:
           command: poetry run pytest
@@ -51,11 +51,14 @@ jobs:
     steps:
       - checkout
       - run: cd projects/golang
-      - go/load-cache
-      - go/mod-download
-      - go/save-cache
-      - go/test:
-          failfast: true
+      - run:
+          command: |
+              cd projects/golang
+              go mod download
+      - run:
+          command: |
+              cd projects/golang
+              go test
 
 
 
