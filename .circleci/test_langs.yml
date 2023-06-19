@@ -31,11 +31,9 @@ jobs:
         type: string
         default: ""
     docker:
-        - image: cimg/python:3.10.1
+        - image: cimg/python:3.10
     steps:
       - checkout
-      - run:
-          command: poetry --version
       - python/install-packages:
           venv-cache: true
           app-dir: projects/python
