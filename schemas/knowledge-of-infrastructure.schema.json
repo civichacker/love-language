@@ -16,7 +16,7 @@
           "description": "Brand name of the service subject to the crowdsource submission, as shown on the Broadband Map."
         },
         "technology": {
-          "type": "integer",
+          "enum": [0, 10 , 40, 50, 60, 61, 70, 71],
           "description": "Code for the technology of the service subject to the crowdsource submission, as shown on the Broadband Map."
         },
         "location_id": {
