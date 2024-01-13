@@ -36,7 +36,7 @@
           "type": "integer",
           "description": "Code identifying the category of fixed service provider crowdsource submission.",
           "minimum": 1,
-          "maximum": 7
+          "maximum": 10
         },
         "request_date": {
           "type": "string",
