@@ -1,13 +1,14 @@
 # Love Language Schemas
 
-Love Language schemas attempt to encode concepts useful in building information systems for Human betterment. Each concept comes with a description describing the fields and possible values. System designers may find it useful that these schemas are defined using JSON Schema (Draft 7). 
+Love Language schemas attempt to encode concepts useful in building information systems for Human betterment. Each concept comes with a description describing the fields and possible values. System designers may find it useful that these schemas are defined using JSON Schema (Draft 2020).
 
 
 ## Schemas
 
 Included in this work are schemas for the following concepts:
 
-- [Use of Force](./examples/use-of-force/README.md)
+- [Broadband Data Collection - Bulk Fixed Crowdsourced Data]("https://us-fcc.app.box.com/v/bdc-bulk-fixed-challenge-spec")
+- [Department of Justice - Use of Force Continuum](./examples/use-of-force/README.md)
 - Environmental Sensors
 - Legislation
 - Open Data
