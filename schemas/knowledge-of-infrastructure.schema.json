@@ -80,7 +80,7 @@
         "if": {
             "properties": {
                 "category_code": {
-                    "enum": [5, 6]
+                    "enum": [5, 6, 7]
                 }
             }
         },
