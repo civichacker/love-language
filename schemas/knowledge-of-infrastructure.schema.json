@@ -19,6 +19,10 @@
           "enum": [0, 10 , 40, 50, 60, 61, 70, 71],
           "description": "Code for the technology of the service subject to the crowdsource submission, as shown on the Broadband Map."
         },
+        "bizrescode": {
+          "enum": ["B", "R", "X", null],
+          "description": "Enumerated character identifying whether the service in the area is business-only, residential-only, or offered to both business and residential customers"
+        },
         "location_id": {
           "type": "string",
           "description": "Unique identifier for the location, from the Broadband Serviceable Location Fabric, about which crowdsource information on fixed broadband availability is being submitted."
