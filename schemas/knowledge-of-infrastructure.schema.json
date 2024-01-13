@@ -80,9 +80,7 @@
         "if": {
             "properties": {
                 "category_code": {
-                    "type": "integer",
-                    "minimum": 5,
-                    "maximum": 7
+                    "enum": [5, 6]
                 }
             }
         },
