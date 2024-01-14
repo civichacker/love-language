@@ -7,7 +7,7 @@ Love Language schemas attempt to encode concepts useful in building information 
 
 Included in this work are schemas for the following concepts:
 
-- [Broadband Data Collection - Bulk Fixed Crowdsourced Data]("https://us-fcc.app.box.com/v/bdc-bulk-fixed-challenge-spec")
+- [Broadband Data Collection - Bulk Fixed Crowdsourced Data](https://us-fcc.app.box.com/v/bdc-bulk-fixed-challenge-spec)
 - [Department of Justice - Use of Force Continuum](./examples/use-of-force/README.md)
 - Environmental Sensors
 - Legislation
