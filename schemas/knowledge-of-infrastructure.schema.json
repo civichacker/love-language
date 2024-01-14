@@ -16,8 +16,12 @@
           "description": "Brand name of the service subject to the crowdsource submission, as shown on the Broadband Map."
         },
         "technology": {
-          "type": "integer",
+          "enum": [0, 10 , 40, 50, 60, 61, 70, 71],
           "description": "Code for the technology of the service subject to the crowdsource submission, as shown on the Broadband Map."
+        },
+        "bizrescode": {
+          "enum": ["B", "R", "X", null],
+          "description": "Enumerated character identifying whether the service in the area is business-only, residential-only, or offered to both business and residential customers"
         },
         "location_id": {
           "type": "string",
@@ -32,7 +36,7 @@
           "type": "integer",
           "description": "Code identifying the category of fixed service provider crowdsource submission.",
           "minimum": 1,
-          "maximum": 7
+          "maximum": 10
         },
         "request_date": {
           "type": "string",
@@ -57,28 +61,17 @@
       {
         "if": {
             "properties": {
-                "technology": {
+                "category_code": {
                     "type": "integer",
-                    "minimum": 60,
-                    "maximum": 71
+                    "minimum": 8,
+                    "maximum": 9
                 }
             }
         },
         "then": {
             "properties": {
-                "category_code": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 9
-                }
-            }
-        },
-        "else": {
-            "properties": {
-                "category_code": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 7
+                "technology": {
+                    "enum": [60, 61, 70, 71]
                 }
             }
         }
@@ -87,9 +80,7 @@
         "if": {
             "properties": {
                 "category_code": {
-                    "type": "integer",
-                    "minimum": 5,
-                    "maximum": 7
+                    "enum": [5, 6, 7]
                 }
             }
         },
