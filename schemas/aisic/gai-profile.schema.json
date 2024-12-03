@@ -1,0 +1,49 @@
+{
+    "$id": "https://raw.githubusercontent.com/civichacker/love-language/master/schemas/aisic/gai-profile.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "gai-profile",
+    "description": "This schema reflects a data specification for voluntary attestation of a GAI profile template based on NIST 600-1.",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "type": {
+          "enum": ["MAP", "GOVERN", "MEASURE", "MANAGE"],
+          "description": "GAI risk profile category type."
+        },
+        "title": {
+          "type": "string",
+          "description": "the specific AI RMF subcategory title"
+        },
+        "category": {
+          "type": "string",
+          "description": "AI RMF category description"
+        },
+        "description": {
+          "type": "string",
+          "description": "long form description of the sub category of suggested actions"
+        },
+        "section_actions": {
+          "type": "array",
+          "suggested_actions": { "$ref": "#/defs/action"},
+          "$defs": {
+            "action": {
+              "type": "object",
+              "description": "",
+              "properties": {
+                "id": { "type": "string" },
+                "action_description": { "type": "string" },
+                "risks": { "type": "array", "contains": { "type": "string" } }
+              }
+            }
+          },
+          "description": "list of suggested action"
+        },
+        "ai_actor_tasks": {
+          "type": "array",
+          "contains": {
+            "type": "string"
+          },
+          "description": "A list of relevant AT Actor Tasks for a given subfunction"
+        }
+    }
+}
