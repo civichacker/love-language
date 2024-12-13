@@ -24,16 +24,12 @@
         },
         "section_actions": {
           "type": "array",
-          "suggested_actions": { "$ref": "#/defs/action"},
-          "$defs": {
-            "action": {
-              "type": "object",
-              "description": "",
-              "properties": {
+          "items": {
+            "type": "object",
+            "properties": {
                 "id": { "type": "string" },
                 "action_description": { "type": "string" },
                 "risks": { "type": "array", "contains": { "type": "string" } }
-              }
             }
           },
           "description": "list of suggested action"
